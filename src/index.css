@@ -1,0 +1,81 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+button, 
+label {
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 16px;
+  margin-bottom: 4px;
+}
+
+input {
+  cursor: pointer;
+}
+
+.app {
+  width: 80%;
+  margin: 48px auto;
+  display: flex;
+  gap: 64px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 2px 0 2px 24px;
+  position: relative;
+}
+
+.item {
+  list-style: none;
+  cursor: pointer;
+  color: #059bf7;
+}
+
+.item__button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  background: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+.arrow {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow::after {
+  border-bottom-style: solid;
+  border-bottom-width: 24px;
+  border-right-style: solid;
+  border-right-width: 24px;
+  border-color: #059bf7;
+  content: '';
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  height: 8px;
+  width: 8px;
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  transform: translate(-50%, -50%) rotate(225deg);
+  transform-origin: center;
+  transition: transform 100ms ease-in;
+}
+
+.arrow__down::after {
+  transform: translate(-50%, -75%) rotate(315deg);
+}
